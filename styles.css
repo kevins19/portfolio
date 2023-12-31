@@ -1,0 +1,146 @@
+:root {
+    /* --light:#E1EEE0; */
+    --light:rgb(201, 201, 255);
+    /* --med-green: #9bba99; */
+    --med: blue;
+    /* --dark-green: #415840; */
+    --dark: rgb(0, 0, 80);
+}
+
+h1 {
+    font-family: 'Azeret Mono', monospace;
+    font-weight: bold;
+    font-size: 50px;
+    color: black;
+}
+h2 {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 20px;
+}
+
+p {
+    font-family: 'Azeret Mono', monospace;
+    font-size: 20px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    /* left: 350px; */
+    padding: 0;
+    /* margin-top: 200px; */
+    width: 100%;
+    /* background-color: yellow; */
+    /* border: 1px black; */
+    top: 200px;
+}
+
+.left-element {
+    /* background: green; */
+    display: inline-block;
+    /* float: left; */
+    padding: 30px;
+    margin: 0 auto;
+    /* background-color: blue; */
+}
+
+.right-element {
+    /* background: red; */
+    display: inline-block;
+    /* margin-left: 0px; */
+    text-align: right;
+    padding: 30px;
+    width: 200px;
+    top: 0px;
+    /* float: left; */
+    margin: 0 auto;
+    position: relative;
+    /* background-color: red; */
+}
+
+/* .artbox1 {
+  width: 200px;
+  height: 50px;
+  background-color: var(--light);
+  margin-top: 30px;
+  margin-left: 30px;
+  opacity: 30%;
+  position: absolute;
+}
+.circleBase {
+  border-radius: 50%;
+  behavior: url(PIE.htc); 
+  position: absolute;
+  margin-left: -10px;
+}
+.type1 {
+  width: 220px;
+  height: 220px;
+  background: var(--light);
+  opacity: 20%;
+} */
+/* .artbox2 {
+  width: 50px;
+  height: 50px;
+  background-color: var(--light);
+  margin-top: -10px;
+  margin-left: -30px;
+  opacity: 30%;
+  position: absolute;
+}
+.artbox3 {
+  width: 50px;
+  height: 50px;
+  background-color: var(--light);
+  margin-top: 0px;
+  margin-left: -40px;
+  opacity: 30%;
+  position: absolute;
+} */
+.link {
+    z-index: 20;
+    text-decoration: underline;
+    color: var(--dark);
+    background: linear-gradient(to right, var(--light), var(--light) 50%, var(--med) 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
+}
+.link:hover {
+    background-position: 0 100%;
+}
+
+.overlap {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+}
+
+.underline {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: var(--med);
+  z-index: 0;
+}
+
+.cvcontainer{
+  width: 70%;
+  height: auto;
+  border:1px solid black;
+  margin: 0 auto;
+
+}
+.headercontainer{
+  width: 70%;
+  text-align: left;
+  padding: 200px;
+  margin: 0 auto;
+  padding: 0px;
+  /* background-color: black; */
+  /* border:1px solid black; */
+  overflow: auto;
+}
