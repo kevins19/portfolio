@@ -1,10 +1,11 @@
 :root {
     /* --light:#E1EEE0; */
-    --light:rgb(201, 201, 255);
+    /* --light:rgb(201, 255, 217); */
+    --light:rgb(167, 221, 182);
     /* --med-green: #9bba99; */
-    --med: blue;
+    --med: rgb(118, 178, 134);
     /* --dark-green: #415840; */
-    --dark: rgb(0, 0, 80);
+    --dark: rgb(34, 73, 49);
 }
 
 html {
@@ -222,7 +223,7 @@ tr:hover {
   
   border-bottom: 1px solid black; /* Add a bottom border for rows */
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
-  background: linear-gradient(to bottom, transparent 50%, var(--med) 50%);
+  background: linear-gradient(to bottom, transparent 50%, var(--light) 50%);
   background-size: 100% 200%;
   transition: background-position 0.5s;
 }
@@ -273,4 +274,9 @@ a:hover {
   position: absolute;
   top: -80px; /* given the fixed header is 50px tall, and you want 15px padding */
   left: 0px;
+}
+
+.recolor {
+  color: var(--med);
+  /* font-size: 90px; */
 }
