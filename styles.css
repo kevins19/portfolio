@@ -7,6 +7,10 @@
     --dark: rgb(0, 0, 80);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
     font-family: 'Azeret Mono', monospace;
     font-weight: bold;
@@ -127,15 +131,29 @@ p {
   z-index: 0;
 }
 
-.cvcontainer{
-  width: 70%;
+
+.cvbody{
+  /* max-width: 600px; */
+  width: 83.333%;
   height: auto;
-  border:1px solid black;
   margin: 0 auto;
 
 }
+@media (min-width: 1200px) {
+  /* Adjust styles for larger screens */
+  .cvbody {
+    width: 1000px; /* Fixed width for larger screens */
+  }
+}
+
+.cvcontainer{
+  width: 100%;
+  height: auto;
+  border:1px solid black;
+  margin: 0 auto;
+}
 .headercontainer{
-  width: 70%;
+  width: 100%;
   text-align: left;
   padding: 200px;
   margin: 0 auto;
@@ -143,4 +161,116 @@ p {
   /* background-color: black; */
   /* border:1px solid black; */
   overflow: auto;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: none; /* Remove borders from cells */
+  padding: 15px;
+  text-align: left;
+  font-family: 'Azeret Mono', monospace;
+}
+
+tr {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, transparent 50%, var(--light) 50%);
+  background-size: 200% 100%;
+  transition: background-position 0.5s;
+  border-bottom: 1px solid black; /* Add a bottom border for rows */
+  font-family: 'Azeret Mono', monospace;
+  vertical-align: top;
+}
+
+tr:hover {
+  background-position: -100% 0;
+  
+}
+
+#cv-title{
+  font-weight: 1000;
+  font-size: 18px;
+}
+#cv-info{
+  font-style:italic;
+  font-size: 12px;
+}
+
+#boldtext{
+  font-weight: 1000;
+}
+
+#italicstext{
+  font-style:italic;
+}
+
+.navbar {
+  backdrop-filter: blur(10px); /* Blur the content behind the navbar */
+  text-align: center;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 20px;
+  
+  border-bottom: 1px solid black; /* Add a bottom border for rows */
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
+  background: linear-gradient(to bottom, transparent 50%, var(--med) 50%);
+  background-size: 100% 200%;
+  transition: background-position 0.5s;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  margin: 0 50px;
+  font-family: 'Azeret Mono', monospace;
+  /* width: 300px; */
+  z-index: 20;
+  text-decoration: underline;
+  color: var(--dark);
+  background: linear-gradient(to right, white, white 50%, var(--dark) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  
+}
+
+a:hover {
+  background-position: 0 100%;
+}
+
+.navbar:hover{
+  /* background-color:#FCC; */
+  background-position: 0% 100%;
+
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.anchor {
+  position: absolute;
+  top: -80px; /* given the fixed header is 50px tall, and you want 15px padding */
+  left: 0px;
 }
