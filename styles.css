@@ -53,7 +53,7 @@ p {
     /* background: red; */
     display: inline-block;
     /* margin-left: 0px; */
-    text-align: right;
+    text-align: center;
     padding: 30px;
     width: 200px;
     top: 0px;
@@ -223,7 +223,7 @@ tr:hover {
   
   border-bottom: 1px solid black; /* Add a bottom border for rows */
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  */
-  background: linear-gradient(to bottom, transparent 50%, var(--light) 50%);
+  background: linear-gradient(to bottom, transparent 50%, var(--med) 50%);
   background-size: 100% 200%;
   transition: background-position 0.5s;
 }
@@ -236,8 +236,8 @@ tr:hover {
   /* width: 300px; */
   z-index: 20;
   text-decoration: underline;
-  color: var(--dark);
-  background: linear-gradient(to right, white, white 50%, var(--dark) 50%);
+  color: black;
+  background: linear-gradient(to right, white, white 50%, black 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -279,4 +279,93 @@ a:hover {
 .recolor {
   color: var(--med);
   /* font-size: 90px; */
+}
+
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:1 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:1 } 
+  to{ bottom:0; opacity:1 }
+  /* 0% {
+    
+  } */
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+.contactbox{
+  width: 300px;
+  margin: 0 auto;
+}
+
+.contactlink {
+  width: 250px;
+  margin: 0 auto;
+  /* padding: 10px; */
+  height: 35px;
+  line-height:35px;
+  /* position: absolute;
+  top: 60px; */
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'Azeret Mono', monospace;
+  font-size: 13px;
+  border: 1px solid black;
+  background: linear-gradient(to right, transparent 50%, var(--light) 50%);
+  background-size: 200% 100%;
+  transition: background-position 0.5s, font-size 0.3s ease;
+}
+
+.contactlink:hover {
+  background-position: -100% 0;
+  font-size: 15px;
+}
+
+.contacttitle{
+  font-family: 'Azeret Mono', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  width: 250px;
+  margin: 0 auto;
 }

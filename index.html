@@ -6,20 +6,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@300&family=Manrope:wght@700&display=swap" rel="stylesheet">
 </head>
+<!-- <body onload="myFunction()" style="margin:0;"> -->
+<body>
 <div class="navbar">
     <a href="#">Home</a>
     <a href="#contact">Contact</a>
     <a href="#cv">CV</a>
 </div>
-<body>
-
 <div class="container">
-
     <div class = "left-element">
         <div class="circleBase type1"></div>
         <div class="artbox2"></div>
         <div class="artbox3"></div>
-        <h2>Hello! I'm</h2>
+        <h2>👋 Hello! I'm</h2>
         <h1 class="underline2">Kevin Shan</h1>
     </div>
     <div class = "right-element">
@@ -29,11 +28,17 @@
         </div>
     </div>
 </div>
-<div class = "container">
+<div class = "container" style="margin-top: 6vh;">
     <a class="anchor" name="contact"></a>
-    <h2>Contact Here...</h2>
+    <div class = "contactbox">
+        <div></div>
+        <!-- <h2>Want to reach out? Contact me here:</h2> -->
+        <div class="contacttitle">Want to reach out? Contact me here:</div>
+        <div class="contactlink" onclick="copyToClipboard('kshan9@gatech.edu')">Email</div>
+        <div class="contactlink" onclick="openLink('https://www.linkedin.com/in/kevin-shan/')">LinkedIn</div>
+    </div>
 </div>
-<div class = "container"  style="margin-top: 40vh;">
+<div class = "container"  style="margin-top: 11vh;">
     <a class="anchor" name="cv"></a>
     <div class="cvbody">
         <div class="headercontainer">
@@ -54,7 +59,7 @@
                     <td>2026</td>
                     <td>
                         <span id="cv-title">Georgia Institute of Technology</span> <br>
-                        <span id="cv-info">B.S. Computer Science, Mathematics Minor</span> <br>
+                        <span id="cv-info">B.S. Computer Science, Minor in Mathematics</span> <br>
                         <span id="cv-info">4.0/4.0 gpa</span> <br>
                     </td>
                     <td>Atlanta, GA</td>
@@ -74,6 +79,7 @@
                     <td>2023 - 2023</td>
                     <td>
                         <span id="cv-title">Programming Intern at HydroGeoLogic, Inc.</span> <br>
+                        <span id="cv-info">Reduced project proposasl costs by 30%, by developing an optimization algorithm for polygon simplification.</span>
                     </td>
                     <td>Reston, VA</td>
                   </tr>
@@ -81,6 +87,7 @@
                     <td>2023 - 2023</td>
                     <td>
                         <span id="cv-title">Student Researcher at University of Maryland</span> <br>
+                        <span id="cv-info">Created a novel real-time bidding algorithm for second-price advertisement auction campaigns.</span>
                     </td>
                     <td>College Park, MD</td>
                   </tr>
@@ -88,6 +95,7 @@
                     <td>2022 - 2022</td>
                     <td>
                         <span id="cv-title">Engineering Intern at Carderock Naval Surface Warfare Center</span> <br>
+                        <span id="cv-info">Engineered an automated workflow for submarine structure testing and data modelling.</span>
                     </td>
                     <td>Bethesda, MD</td>
                   </tr>
@@ -106,6 +114,7 @@
                     <td>2023 - 2023</td>
                     <td>
                         <span id="cv-title">Georgia Tech ICPC Team Representative</span> <br>
+                        <span id="cv-info">One of three students representing Georgia Tech in the International Collegiate Programming Contest on the A Team.</span>
                     </td>
                     <td>Atlanta, GA</td>
                   </tr>
@@ -113,6 +122,7 @@
                     <td>2023 - 2023</td>
                     <td>
                         <span id="cv-title">Georgia Tech Trading Club Quantitative Developer</span> <br>
+                        <span id="cv-info">Designed and implemented a complete cryptocurrency trading infrastructure from scratch.</span>
                     </td>
                     <td>Atlanta, GA</td>
                   </tr>
@@ -169,8 +179,44 @@
 </div>
 
 <div class="container" style="height: 200px;">
+</div>
 
 </div>
   
 </body>
+
+<!-- <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 0);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+</script> -->
+<script src="main.js"></script>
+<script>
+    function copyToClipboard(text) {
+      var textArea = document.createElement("textarea");
+      textArea.value = text;
+
+      // Append the textarea to the document
+      document.body.appendChild(textArea);
+
+      // Select and copy the text in the textarea
+      textArea.select();
+      document.execCommand('copy');
+
+      // Remove the textarea from the document
+      document.body.removeChild(textArea);
+
+      alert("Text has been copied to clipboard: " + text);
+    }
+    function openLink(url) {
+        window.open(url, '_blank');
+    }
+  </script>
 </html>
