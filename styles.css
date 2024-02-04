@@ -182,7 +182,7 @@ tr {
   overflow: hidden;
   background: linear-gradient(to right, transparent 50%, var(--light) 50%);
   background-size: 200% 100%;
-  transition: background-position 0.5s;
+  transition: background-position 0.7s;
   border-bottom: 1px solid black; /* Add a bottom border for rows */
   font-family: 'Azeret Mono', monospace;
   vertical-align: top;
